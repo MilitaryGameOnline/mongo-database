@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class User {
-	long id = 0L;
+	private long id = 0L;
 	String name = "Default";
 	String password = "password";
 	String email = "email";
