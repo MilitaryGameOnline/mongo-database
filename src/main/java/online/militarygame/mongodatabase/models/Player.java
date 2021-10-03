@@ -7,7 +7,7 @@ import java.util.List;
 public class Player {
 	private long userId;
 	private int order;
-	private List<Integer> commanders;
+	private List<Commander> commanders;
 
 	private double abilityBuildup = 0D;
 	private int abilityStatus = 0;
