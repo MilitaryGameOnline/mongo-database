@@ -18,7 +18,7 @@ public class RuleSet {
 	//Tile id, tile type map;
 	private Map<Integer, TileType> tileTypes = new HashMap<>();
 
-	private List<Commander> availableCommanders = new ArrayList<>();
+	private Map<Integer, Commander> availableCommanders = new HashMap<>();
 
 	private GameType gameType = GameType.STANDARD;
 

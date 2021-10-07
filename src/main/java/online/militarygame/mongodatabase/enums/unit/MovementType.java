@@ -12,4 +12,8 @@ public enum MovementType {
 	FLYING,
 
 	BARRIER,
+
+	FREE_GROUND,
+	FREE_WATER,
+	FREE,
 }
