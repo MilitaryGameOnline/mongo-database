@@ -48,6 +48,9 @@ public class UnitType {
 	private boolean refuelTurnStart = false;
 	private boolean refuelAll = false;
 
+	private int selfDestructAbilityRange = 0;
+	private double selfDestructAbilityDamage = 0;
+
 	public int getId() {
 		return id;
 	}
@@ -301,5 +304,21 @@ public class UnitType {
 
 	public void setCanAttackStealthed(boolean canAttackStealthed) {
 		this.canAttackStealthed = canAttackStealthed;
+	}
+
+	public int getSelfDestructAbilityRange() {
+		return selfDestructAbilityRange;
+	}
+
+	public void setSelfDestructAbilityRange(int selfDestructAbilityRange) {
+		this.selfDestructAbilityRange = selfDestructAbilityRange;
+	}
+
+	public double getSelfDestructAbilityDamage() {
+		return selfDestructAbilityDamage;
+	}
+
+	public void setSelfDestructAbilityDamage(double selfDestructAbilityDamage) {
+		this.selfDestructAbilityDamage = selfDestructAbilityDamage;
 	}
 }
