@@ -1,11 +1,10 @@
 package online.militarygame.mongodatabase.models;
 
-import online.militarygame.mongodatabase.enums.unit.AttackType;
 import online.militarygame.mongodatabase.enums.unit.MovementType;
-import online.militarygame.mongodatabase.enums.unit.BaseType;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class UnitType {
 	private int id;
@@ -13,7 +12,6 @@ public class UnitType {
 	private String graphicsName = "/units/default.svg";
 
 	private MovementType movementType = MovementType.FOOT;
-	private BaseType baseType = BaseType.GROUND;
 	private int movement = 1;
 	private boolean banned = false;
 
@@ -29,13 +27,25 @@ public class UnitType {
 	private boolean attackAfterMove = true;
 	private boolean counterAttackMelee = true;
 	private boolean counterAttackRanged = false;
-	private AttackType attackType = AttackType.MELEE;
 	private int minRange = 1;
 	private int maxRange = 1;
 
 	private boolean canCapture = false;
 
 	private Map<Integer, Double> damageValues = new HashMap<>();
+	private Map<Integer, Double> secondaryDamageValues = new HashMap<>();
+
+	private int loadCapacity = 0;
+	private boolean unloadedCanMove = false;
+	private boolean refuelsLoaded = true;
+	private double loadedHealRate = 0;
+	private Set<Integer> loadableUnits;
+
+	private int nearbyRefuelRange = 0;
+	private double nearbyRefuelRepair = 0;
+	private boolean refuelAbility = false;
+	private boolean refuelTurnStart = false;
+	private boolean refuelAll = false;
 
 	public int getId() {
 		return id;
@@ -68,15 +78,6 @@ public class UnitType {
 	public void setMovementType(MovementType movementType) {
 		this.movementType = movementType;
 	}
-
-	public BaseType getBaseType() {
-		return baseType;
-	}
-
-	public void setBaseType(BaseType baseType) {
-		this.baseType = baseType;
-	}
-
 	public int getMovement() {
 		return movement;
 	}
@@ -173,14 +174,6 @@ public class UnitType {
 		this.counterAttackRanged = counterAttackRanged;
 	}
 
-	public AttackType getAttackType() {
-		return attackType;
-	}
-
-	public void setAttackType(AttackType attackType) {
-		this.attackType = attackType;
-	}
-
 	public int getMinRange() {
 		return minRange;
 	}
@@ -211,5 +204,93 @@ public class UnitType {
 
 	public void setDamageValues(Map<Integer, Double> damageValues) {
 		this.damageValues = damageValues;
+	}
+
+	public Map<Integer, Double> getSecondaryDamageValues() {
+		return secondaryDamageValues;
+	}
+
+	public void setSecondaryDamageValues(Map<Integer, Double> secondaryDamageValues) {
+		this.secondaryDamageValues = secondaryDamageValues;
+	}
+
+	public int getLoadCapacity() {
+		return loadCapacity;
+	}
+
+	public void setLoadCapacity(int loadCapacity) {
+		this.loadCapacity = loadCapacity;
+	}
+
+	public Set<Integer> getLoadableUnits() {
+		return loadableUnits;
+	}
+
+	public void setLoadableUnits(Set<Integer> loadableUnits) {
+		this.loadableUnits = loadableUnits;
+	}
+
+	public boolean isUnloadedCanMove() {
+		return unloadedCanMove;
+	}
+
+	public void setUnloadedCanMove(boolean unloadedCanMove) {
+		this.unloadedCanMove = unloadedCanMove;
+	}
+
+	public boolean isRefuelsLoaded() {
+		return refuelsLoaded;
+	}
+
+	public void setRefuelsLoaded(boolean refuelsLoaded) {
+		this.refuelsLoaded = refuelsLoaded;
+	}
+
+	public double getLoadedHealRate() {
+		return loadedHealRate;
+	}
+
+	public void setLoadedHealRate(double loadedHealRate) {
+		this.loadedHealRate = loadedHealRate;
+	}
+
+	public int getNearbyRefuelRange() {
+		return nearbyRefuelRange;
+	}
+
+	public void setNearbyRefuelRange(int nearbyRefuelRange) {
+		this.nearbyRefuelRange = nearbyRefuelRange;
+	}
+
+	public double getNearbyRefuelRepair() {
+		return nearbyRefuelRepair;
+	}
+
+	public void setNearbyRefuelRepair(double nearbyRefuelRepair) {
+		this.nearbyRefuelRepair = nearbyRefuelRepair;
+	}
+
+	public boolean isRefuelAbility() {
+		return refuelAbility;
+	}
+
+	public void setRefuelAbility(boolean refuelAbility) {
+		this.refuelAbility = refuelAbility;
+	}
+
+	public boolean isRefuelTurnStart() {
+		return refuelTurnStart;
+	}
+
+	public void setRefuelTurnStart(boolean refuelTurnStart) {
+		this.refuelTurnStart = refuelTurnStart;
+	}
+
+	public boolean isRefuelAll() {
+		return refuelAll;
+	}
+
+	public void setRefuelAll(boolean refuelAll) {
+		this.refuelAll = refuelAll;
 	}
 }

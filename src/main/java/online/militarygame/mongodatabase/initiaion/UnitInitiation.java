@@ -1,7 +1,5 @@
 package online.militarygame.mongodatabase.initiaion;
 
-import online.militarygame.mongodatabase.enums.unit.AttackType;
-import online.militarygame.mongodatabase.enums.unit.BaseType;
 import online.militarygame.mongodatabase.enums.unit.MovementType;
 import online.militarygame.mongodatabase.models.UnitType;
 
@@ -46,7 +44,6 @@ public class UnitInitiation {
 		assault_rifle.setName("Assault_rifle");
 		assault_rifle.setGraphicsName("/units/Assault_rifle.svg");
 		assault_rifle.setMovementType(MovementType.FOOT);
-		assault_rifle.setBaseType(BaseType.GROUND);
 		assault_rifle.setMovement(3);
 		assault_rifle.setBanned(false);
 		assault_rifle.setValue(10);
@@ -58,7 +55,6 @@ public class UnitInitiation {
 		assault_rifle.setAttackAfterMove(true);
 		assault_rifle.setCounterAttackMelee(true);
 		assault_rifle.setCounterAttackRanged(false);
-		assault_rifle.setAttackType(AttackType.MELEE);
 		assault_rifle.setMinRange(1);
 		assault_rifle.setMaxRange(1);
 		assault_rifle.setCanCapture(true);
@@ -96,7 +92,6 @@ public class UnitInitiation {
 		bazooka.setName("Bazooka");
 		bazooka.setGraphicsName("/units/Bazooka.svg");
 		bazooka.setMovementType(MovementType.FOOT2);
-		bazooka.setBaseType(BaseType.GROUND);
 		bazooka.setMovement(2);
 		bazooka.setBanned(false);
 		bazooka.setValue(30);
@@ -108,7 +103,6 @@ public class UnitInitiation {
 		bazooka.setAttackAfterMove(true);
 		bazooka.setCounterAttackMelee(true);
 		bazooka.setCounterAttackRanged(false);
-		bazooka.setAttackType(AttackType.MELEE);
 		bazooka.setMinRange(1);
 		bazooka.setMaxRange(1);
 		bazooka.setCanCapture(true);
@@ -196,7 +190,6 @@ public class UnitInitiation {
 		car.setName("Car");
 		car.setGraphicsName("/units/Car.svg");
 		car.setMovementType(MovementType.TIRE);
-		car.setBaseType(BaseType.GROUND);
 		car.setMovement(9);
 		car.setBanned(false);
 		car.setValue(40);
@@ -208,7 +201,6 @@ public class UnitInitiation {
 		car.setAttackAfterMove(true);
 		car.setCounterAttackMelee(true);
 		car.setCounterAttackRanged(false);
-		car.setAttackType(AttackType.MELEE);
 		car.setMinRange(1);
 		car.setMaxRange(1);
 		car.setCanCapture(false);
@@ -246,7 +238,6 @@ public class UnitInitiation {
 		supplier.setName("Supplier");
 		supplier.setGraphicsName("/units/Supplier.svg");
 		supplier.setMovementType(MovementType.TRACK);
-		supplier.setBaseType(BaseType.GROUND);
 		supplier.setMovement(6);
 		supplier.setBanned(false);
 		supplier.setValue(50);
@@ -258,7 +249,6 @@ public class UnitInitiation {
 		supplier.setAttackAfterMove(false);
 		supplier.setCounterAttackMelee(false);
 		supplier.setCounterAttackRanged(false);
-		supplier.setAttackType(AttackType.MELEE);
 		supplier.setMinRange(0);
 		supplier.setMaxRange(0);
 		supplier.setCanCapture(false);
@@ -296,7 +286,6 @@ public class UnitInitiation {
 		small_cannon.setName("Small_cannon");
 		small_cannon.setGraphicsName("/units/Small_cannon.svg");
 		small_cannon.setMovementType(MovementType.TRACK);
-		small_cannon.setBaseType(BaseType.GROUND);
 		small_cannon.setMovement(6);
 		small_cannon.setBanned(false);
 		small_cannon.setValue(60);
@@ -308,7 +297,6 @@ public class UnitInitiation {
 		small_cannon.setAttackAfterMove(false);
 		small_cannon.setCounterAttackMelee(false);
 		small_cannon.setCounterAttackRanged(false);
-		small_cannon.setAttackType(AttackType.RANGED);
 		small_cannon.setMinRange(2);
 		small_cannon.setMaxRange(3);
 		small_cannon.setCanCapture(false);
@@ -346,7 +334,6 @@ public class UnitInitiation {
 		big_cannon.setName("Big_cannon");
 		big_cannon.setGraphicsName("/units/Big_cannon.svg");
 		big_cannon.setMovementType(MovementType.TIRE);
-		big_cannon.setBaseType(BaseType.GROUND);
 		big_cannon.setMovement(5);
 		big_cannon.setBanned(false);
 		big_cannon.setValue(150);
@@ -358,7 +345,6 @@ public class UnitInitiation {
 		big_cannon.setAttackAfterMove(false);
 		big_cannon.setCounterAttackMelee(false);
 		big_cannon.setCounterAttackRanged(false);
-		big_cannon.setAttackType(AttackType.RANGED);
 		big_cannon.setMinRange(3);
 		big_cannon.setMaxRange(5);
 		big_cannon.setCanCapture(false);
@@ -396,7 +382,6 @@ public class UnitInitiation {
 		air_cannon.setName("Air_cannon");
 		air_cannon.setGraphicsName("/units/Air_cannon.svg");
 		air_cannon.setMovementType(MovementType.TIRE);
-		air_cannon.setBaseType(BaseType.GROUND);
 		air_cannon.setMovement(5);
 		air_cannon.setBanned(false);
 		air_cannon.setValue(120);
@@ -408,7 +393,6 @@ public class UnitInitiation {
 		air_cannon.setAttackAfterMove(false);
 		air_cannon.setCounterAttackMelee(false);
 		air_cannon.setCounterAttackRanged(false);
-		air_cannon.setAttackType(AttackType.RANGED);
 		air_cannon.setMinRange(3);
 		air_cannon.setMaxRange(6);
 		air_cannon.setCanCapture(false);
@@ -446,7 +430,6 @@ public class UnitInitiation {
 		mobile_flak.setName("Mobile_flak");
 		mobile_flak.setGraphicsName("/units/Mobile_flak.svg");
 		mobile_flak.setMovementType(MovementType.TRACK);
-		mobile_flak.setBaseType(BaseType.GROUND);
 		mobile_flak.setMovement(6);
 		mobile_flak.setBanned(false);
 		mobile_flak.setValue(80);
@@ -458,7 +441,6 @@ public class UnitInitiation {
 		mobile_flak.setAttackAfterMove(true);
 		mobile_flak.setCounterAttackMelee(true);
 		mobile_flak.setCounterAttackRanged(false);
-		mobile_flak.setAttackType(AttackType.MELEE);
 		mobile_flak.setMinRange(1);
 		mobile_flak.setMaxRange(1);
 		mobile_flak.setCanCapture(false);
@@ -496,7 +478,6 @@ public class UnitInitiation {
 		small_tank.setName("Small_tank");
 		small_tank.setGraphicsName("/units/Small_tank.svg");
 		small_tank.setMovementType(MovementType.TRACK);
-		small_tank.setBaseType(BaseType.GROUND);
 		small_tank.setMovement(6);
 		small_tank.setBanned(false);
 		small_tank.setValue(10);
@@ -508,7 +489,6 @@ public class UnitInitiation {
 		small_tank.setAttackAfterMove(true);
 		small_tank.setCounterAttackMelee(true);
 		small_tank.setCounterAttackRanged(false);
-		small_tank.setAttackType(AttackType.MELEE);
 		small_tank.setMinRange(1);
 		small_tank.setMaxRange(1);
 		small_tank.setCanCapture(false);
@@ -546,7 +526,6 @@ public class UnitInitiation {
 		big_tank.setName("Big_tank");
 		big_tank.setGraphicsName("/units/Big_tank.svg");
 		big_tank.setMovementType(MovementType.TRACK);
-		big_tank.setBaseType(BaseType.GROUND);
 		big_tank.setMovement(5);
 		big_tank.setBanned(false);
 		big_tank.setValue(150);
@@ -558,7 +537,6 @@ public class UnitInitiation {
 		big_tank.setAttackAfterMove(true);
 		big_tank.setCounterAttackMelee(true);
 		big_tank.setCounterAttackRanged(false);
-		big_tank.setAttackType(AttackType.MELEE);
 		big_tank.setMinRange(1);
 		big_tank.setMaxRange(1);
 		big_tank.setCanCapture(false);
@@ -596,7 +574,6 @@ public class UnitInitiation {
 		super_tank.setName("Super_tank");
 		super_tank.setGraphicsName("/units/Super_tank.svg");
 		super_tank.setMovementType(MovementType.TRACK);
-		super_tank.setBaseType(BaseType.GROUND);
 		super_tank.setMovement(6);
 		super_tank.setBanned(false);
 		super_tank.setValue(210);
@@ -608,7 +585,6 @@ public class UnitInitiation {
 		super_tank.setAttackAfterMove(true);
 		super_tank.setCounterAttackMelee(true);
 		super_tank.setCounterAttackRanged(false);
-		super_tank.setAttackType(AttackType.MELEE);
 		super_tank.setMinRange(1);
 		super_tank.setMaxRange(1);
 		super_tank.setCanCapture(false);
@@ -646,7 +622,6 @@ public class UnitInitiation {
 		giant_tank.setName("Giant_tank");
 		giant_tank.setGraphicsName("/units/Giant_tank.svg");
 		giant_tank.setMovementType(MovementType.TRACK);
-		giant_tank.setBaseType(BaseType.GROUND);
 		giant_tank.setMovement(4);
 		giant_tank.setBanned(false);
 		giant_tank.setValue(250);
@@ -658,7 +633,6 @@ public class UnitInitiation {
 		giant_tank.setAttackAfterMove(true);
 		giant_tank.setCounterAttackMelee(true);
 		giant_tank.setCounterAttackRanged(false);
-		giant_tank.setAttackType(AttackType.MELEE);
 		giant_tank.setMinRange(1);
 		giant_tank.setMaxRange(1);
 		giant_tank.setCanCapture(false);
@@ -696,7 +670,6 @@ public class UnitInitiation {
 		fighter.setName("Fighter");
 		fighter.setGraphicsName("/units/Fighter.svg");
 		fighter.setMovementType(MovementType.FLYING);
-		fighter.setBaseType(BaseType.FLYING);
 		fighter.setMovement(9);
 		fighter.setBanned(false);
 		fighter.setValue(200);
@@ -708,7 +681,6 @@ public class UnitInitiation {
 		fighter.setAttackAfterMove(true);
 		fighter.setCounterAttackMelee(true);
 		fighter.setCounterAttackRanged(false);
-		fighter.setAttackType(AttackType.MELEE);
 		fighter.setMinRange(1);
 		fighter.setMaxRange(1);
 		fighter.setCanCapture(false);
@@ -746,7 +718,6 @@ public class UnitInitiation {
 		stealth_fighter.setName("Stealth_fighter");
 		stealth_fighter.setGraphicsName("/units/Stealth_fighter.svg");
 		stealth_fighter.setMovementType(MovementType.FLYING);
-		stealth_fighter.setBaseType(BaseType.FLYING);
 		stealth_fighter.setMovement(7);
 		stealth_fighter.setBanned(false);
 		stealth_fighter.setValue(240);
@@ -758,7 +729,6 @@ public class UnitInitiation {
 		stealth_fighter.setAttackAfterMove(true);
 		stealth_fighter.setCounterAttackMelee(true);
 		stealth_fighter.setCounterAttackRanged(false);
-		stealth_fighter.setAttackType(AttackType.MELEE);
 		stealth_fighter.setMinRange(1);
 		stealth_fighter.setMaxRange(1);
 		stealth_fighter.setCanCapture(false);
@@ -796,7 +766,6 @@ public class UnitInitiation {
 		bomber.setName("Bomber");
 		bomber.setGraphicsName("/units/Bomber.svg");
 		bomber.setMovementType(MovementType.FLYING);
-		bomber.setBaseType(BaseType.FLYING);
 		bomber.setMovement(7);
 		bomber.setBanned(false);
 		bomber.setValue(220);
@@ -808,7 +777,6 @@ public class UnitInitiation {
 		bomber.setAttackAfterMove(true);
 		bomber.setCounterAttackMelee(true);
 		bomber.setCounterAttackRanged(false);
-		bomber.setAttackType(AttackType.MELEE);
 		bomber.setMinRange(1);
 		bomber.setMaxRange(1);
 		bomber.setCanCapture(false);
@@ -846,7 +814,6 @@ public class UnitInitiation {
 		flying_bomb.setName("Flying_bomb");
 		flying_bomb.setGraphicsName("/units/Flying_bomb.svg");
 		flying_bomb.setMovementType(MovementType.FLYING);
-		flying_bomb.setBaseType(BaseType.FLYING);
 		flying_bomb.setMovement(9);
 		flying_bomb.setBanned(false);
 		flying_bomb.setValue(250);
@@ -858,7 +825,6 @@ public class UnitInitiation {
 		flying_bomb.setAttackAfterMove(true);
 		flying_bomb.setCounterAttackMelee(true);
 		flying_bomb.setCounterAttackRanged(false);
-		flying_bomb.setAttackType(AttackType.MELEE);
 		flying_bomb.setMinRange(1);
 		flying_bomb.setMaxRange(1);
 		flying_bomb.setCanCapture(false);
@@ -896,7 +862,6 @@ public class UnitInitiation {
 		attack_helicopter.setName("Attack_helicopter");
 		attack_helicopter.setGraphicsName("/units/Attack_helicopter.svg");
 		attack_helicopter.setMovementType(MovementType.FLYING);
-		attack_helicopter.setBaseType(BaseType.FLYING);
 		attack_helicopter.setMovement(6);
 		attack_helicopter.setBanned(false);
 		attack_helicopter.setValue(90);
@@ -908,7 +873,6 @@ public class UnitInitiation {
 		attack_helicopter.setAttackAfterMove(true);
 		attack_helicopter.setCounterAttackMelee(true);
 		attack_helicopter.setCounterAttackRanged(false);
-		attack_helicopter.setAttackType(AttackType.MELEE);
 		attack_helicopter.setMinRange(1);
 		attack_helicopter.setMaxRange(1);
 		attack_helicopter.setCanCapture(false);
@@ -946,7 +910,6 @@ public class UnitInitiation {
 		support_helicopter.setName("Support_helicopter");
 		support_helicopter.setGraphicsName("/units/Support_helicopter.svg");
 		support_helicopter.setMovementType(MovementType.FLYING);
-		support_helicopter.setBaseType(BaseType.FLYING);
 		support_helicopter.setMovement(6);
 		support_helicopter.setBanned(false);
 		support_helicopter.setValue(50);
@@ -958,7 +921,6 @@ public class UnitInitiation {
 		support_helicopter.setAttackAfterMove(false);
 		support_helicopter.setCounterAttackMelee(false);
 		support_helicopter.setCounterAttackRanged(false);
-		support_helicopter.setAttackType(AttackType.MELEE);
 		support_helicopter.setMinRange(0);
 		support_helicopter.setMaxRange(0);
 		support_helicopter.setCanCapture(false);
@@ -996,7 +958,6 @@ public class UnitInitiation {
 		transport_ship.setName("Transport_ship");
 		transport_ship.setGraphicsName("/units/Transport_ship.svg");
 		transport_ship.setMovementType(MovementType.ALL_WATER);
-		transport_ship.setBaseType(BaseType.WATER);
 		transport_ship.setMovement(6);
 		transport_ship.setBanned(false);
 		transport_ship.setValue(120);
@@ -1008,7 +969,6 @@ public class UnitInitiation {
 		transport_ship.setAttackAfterMove(false);
 		transport_ship.setCounterAttackMelee(false);
 		transport_ship.setCounterAttackRanged(false);
-		transport_ship.setAttackType(AttackType.MELEE);
 		transport_ship.setMinRange(0);
 		transport_ship.setMaxRange(0);
 		transport_ship.setCanCapture(false);
@@ -1046,7 +1006,6 @@ public class UnitInitiation {
 		repair_ship.setName("Repair_ship");
 		repair_ship.setGraphicsName("/units/Repair_ship.svg");
 		repair_ship.setMovementType(MovementType.ALL_WATER);
-		repair_ship.setBaseType(BaseType.WATER);
 		repair_ship.setMovement(7);
 		repair_ship.setBanned(false);
 		repair_ship.setValue(70);
@@ -1058,7 +1017,6 @@ public class UnitInitiation {
 		repair_ship.setAttackAfterMove(false);
 		repair_ship.setCounterAttackMelee(false);
 		repair_ship.setCounterAttackRanged(false);
-		repair_ship.setAttackType(AttackType.MELEE);
 		repair_ship.setMinRange(0);
 		repair_ship.setMaxRange(0);
 		repair_ship.setCanCapture(false);
@@ -1096,7 +1054,6 @@ public class UnitInitiation {
 		submarine.setName("Submarine");
 		submarine.setGraphicsName("/units/Submarine.svg");
 		submarine.setMovementType(MovementType.DEEP_WATER);
-		submarine.setBaseType(BaseType.WATER);
 		submarine.setMovement(6);
 		submarine.setBanned(false);
 		submarine.setValue(180);
@@ -1108,7 +1065,6 @@ public class UnitInitiation {
 		submarine.setAttackAfterMove(true);
 		submarine.setCounterAttackMelee(true);
 		submarine.setCounterAttackRanged(false);
-		submarine.setAttackType(AttackType.MELEE);
 		submarine.setMinRange(1);
 		submarine.setMaxRange(1);
 		submarine.setCanCapture(false);
@@ -1146,7 +1102,6 @@ public class UnitInitiation {
 		combat_ship.setName("Combat_ship");
 		combat_ship.setGraphicsName("/units/Combat_ship.svg");
 		combat_ship.setMovementType(MovementType.DEEP_WATER);
-		combat_ship.setBaseType(BaseType.WATER);
 		combat_ship.setMovement(7);
 		combat_ship.setBanned(false);
 		combat_ship.setValue(140);
@@ -1158,7 +1113,6 @@ public class UnitInitiation {
 		combat_ship.setAttackAfterMove(true);
 		combat_ship.setCounterAttackMelee(true);
 		combat_ship.setCounterAttackRanged(false);
-		combat_ship.setAttackType(AttackType.MELEE);
 		combat_ship.setMinRange(1);
 		combat_ship.setMaxRange(1);
 		combat_ship.setCanCapture(false);
@@ -1196,7 +1150,6 @@ public class UnitInitiation {
 		cannon_ship.setName("Cannon_ship");
 		cannon_ship.setGraphicsName("/units/Cannon_ship.svg");
 		cannon_ship.setMovementType(MovementType.DEEP_WATER);
-		cannon_ship.setBaseType(BaseType.WATER);
 		cannon_ship.setMovement(6);
 		cannon_ship.setBanned(false);
 		cannon_ship.setValue(250);
@@ -1208,7 +1161,6 @@ public class UnitInitiation {
 		cannon_ship.setAttackAfterMove(true);
 		cannon_ship.setCounterAttackMelee(false);
 		cannon_ship.setCounterAttackRanged(false);
-		cannon_ship.setAttackType(AttackType.RANGED);
 		cannon_ship.setMinRange(3);
 		cannon_ship.setMaxRange(5);
 		cannon_ship.setCanCapture(false);
@@ -1246,7 +1198,6 @@ public class UnitInitiation {
 		aircraft_carrier.setName("Aircraft_carrier");
 		aircraft_carrier.setGraphicsName("/units/Aircraft_carrier.svg");
 		aircraft_carrier.setMovementType(MovementType.DEEP_WATER);
-		aircraft_carrier.setBaseType(BaseType.WATER);
 		aircraft_carrier.setMovement(1);
 		aircraft_carrier.setBanned(false);
 		aircraft_carrier.setValue(280);
@@ -1258,7 +1209,6 @@ public class UnitInitiation {
 		aircraft_carrier.setAttackAfterMove(true);
 		aircraft_carrier.setCounterAttackMelee(true);
 		aircraft_carrier.setCounterAttackRanged(false);
-		aircraft_carrier.setAttackType(AttackType.RANGED);
 		aircraft_carrier.setMinRange(3);
 		aircraft_carrier.setMaxRange(7);
 		aircraft_carrier.setCanCapture(false);
@@ -1290,6 +1240,54 @@ public class UnitInitiation {
 		damageValuesAircraft_carrier.put(Aircraft_carrier, 0.D);
 		aircraft_carrier.setDamageValues(damageValuesAircraft_carrier);
 		unitTypes.put(Aircraft_carrier, aircraft_carrier);
+
+		UnitType barrier_cannon = new UnitType();
+		barrier_cannon.setId(Barrier_cannon);
+		barrier_cannon.setName("Barrier_cannon");
+		barrier_cannon.setGraphicsName("/units/Barrier_cannon.svg");
+		barrier_cannon.setMovementType(MovementType.BARRIER);
+		barrier_cannon.setMovement(11);
+		barrier_cannon.setBanned(false);
+		barrier_cannon.setValue(200);
+		barrier_cannon.setMaxAmmo(9);
+		barrier_cannon.setMaxFuel(99);
+		barrier_cannon.setFuelPerTurn(0);
+		barrier_cannon.setDestroyOnFuelOut(false);
+		barrier_cannon.setCanStealth(false);
+		barrier_cannon.setAttackAfterMove(false);
+		barrier_cannon.setCounterAttackMelee(false);
+		barrier_cannon.setCounterAttackRanged(false);
+		barrier_cannon.setMinRange(2);
+		barrier_cannon.setMaxRange(5);
+		barrier_cannon.setCanCapture(false);
+		Map<Integer, Double> damageValuesBarrier_cannon = new HashMap<>();
+		damageValuesBarrier_cannon.put(Assault_rifle, 0.D);
+		damageValuesBarrier_cannon.put(Bazooka, 0.D);
+		damageValuesBarrier_cannon.put(Bike, 0.D);
+		damageValuesBarrier_cannon.put(Car, 0.D);
+		damageValuesBarrier_cannon.put(Supplier, 0.D);
+		damageValuesBarrier_cannon.put(Small_cannon, 0.D);
+		damageValuesBarrier_cannon.put(Big_cannon, 0.D);
+		damageValuesBarrier_cannon.put(Air_cannon, 0.D);
+		damageValuesBarrier_cannon.put(Mobile_flak, 0.D);
+		damageValuesBarrier_cannon.put(Small_tank, 0.D);
+		damageValuesBarrier_cannon.put(Big_tank, 0.D);
+		damageValuesBarrier_cannon.put(Super_tank, 0.D);
+		damageValuesBarrier_cannon.put(Giant_tank, 0.D);
+		damageValuesBarrier_cannon.put(Fighter, 0.D);
+		damageValuesBarrier_cannon.put(Stealth_fighter, 0.D);
+		damageValuesBarrier_cannon.put(Bomber, 0.D);
+		damageValuesBarrier_cannon.put(Flying_bomb, 0.D);
+		damageValuesBarrier_cannon.put(Attack_helicopter, 0.D);
+		damageValuesBarrier_cannon.put(Support_helicopter, 0.D);
+		damageValuesBarrier_cannon.put(Transport_ship, 0.D);
+		damageValuesBarrier_cannon.put(Repair_ship, 0.D);
+		damageValuesBarrier_cannon.put(Submarine, 0.D);
+		damageValuesBarrier_cannon.put(Combat_ship, 0.D);
+		damageValuesBarrier_cannon.put(Cannon_ship, 0.D);
+		damageValuesBarrier_cannon.put(Aircraft_carrier, 0.D);
+		barrier_cannon.setDamageValues(damageValuesBarrier_cannon);
+		unitTypes.put(Aircraft_carrier, barrier_cannon);
 
 
 		return unitTypes;
