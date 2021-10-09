@@ -29,6 +29,7 @@ public class UnitType {
 	private boolean counterAttackRanged = false;
 	private int minRange = 1;
 	private int maxRange = 1;
+	private boolean canAttackStealthed = false;
 
 	private boolean canCapture = false;
 
@@ -292,5 +293,13 @@ public class UnitType {
 
 	public void setRefuelAll(boolean refuelAll) {
 		this.refuelAll = refuelAll;
+	}
+
+	public boolean isCanAttackStealthed() {
+		return canAttackStealthed;
+	}
+
+	public void setCanAttackStealthed(boolean canAttackStealthed) {
+		this.canAttackStealthed = canAttackStealthed;
 	}
 }
