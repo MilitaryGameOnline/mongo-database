@@ -3,6 +3,7 @@ package online.militarygame.mongodatabase.models;
 import online.militarygame.mongodatabase.enums.unit.MovementType;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -40,7 +41,7 @@ public class UnitType {
 	private boolean unloadedCanMove = false;
 	private boolean refuelsLoaded = true;
 	private double loadedHealRate = 0;
-	private Set<Integer> loadableUnits;
+	private Set<Integer> loadableUnits = new HashSet<>();
 
 	private int nearbyRefuelRange = 0;
 	private double nearbyRefuelRepair = 0;

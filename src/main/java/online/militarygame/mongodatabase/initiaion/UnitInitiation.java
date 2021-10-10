@@ -237,6 +237,14 @@ public class UnitInitiation {
 		supplier.setCanCapture(false);
 		Map<Integer, Double> damageValuesSupplier = new HashMap<>();
 		supplier.setDamageValues(damageValuesSupplier);
+		supplier.setLoadCapacity(1);
+		supplier.setRefuelsLoaded(true);
+		supplier.getLoadableUnits().add(Assault_rifle);
+		supplier.getLoadableUnits().add(Bazooka);
+		supplier.setNearbyRefuelRange(1);
+		supplier.setRefuelAbility(true);
+		supplier.setRefuelTurnStart(true);
+		supplier.setRefuelAll(true);
 		unitTypes.put(Supplier, supplier);
 
 		UnitType small_cannon = new UnitType();
@@ -764,6 +772,8 @@ public class UnitInitiation {
 		flying_bomb.setCanCapture(false);
 		Map<Integer, Double> damageValuesFlying_bomb = new HashMap<>();
 		flying_bomb.setDamageValues(damageValuesFlying_bomb);
+		flying_bomb.setSelfDestructAbilityRange(3);
+		flying_bomb.setSelfDestructAbilityDamage(50);
 		unitTypes.put(Flying_bomb, flying_bomb);
 
 		UnitType attack_helicopter = new UnitType();
@@ -844,6 +854,11 @@ public class UnitInitiation {
 		support_helicopter.setCanCapture(false);
 		Map<Integer, Double> damageValuesSupport_helicopter = new HashMap<>();
 		support_helicopter.setDamageValues(damageValuesSupport_helicopter);
+		support_helicopter.setLoadCapacity(1);
+		support_helicopter.setUnloadedCanMove(false);
+		support_helicopter.setRefuelsLoaded(false);
+		support_helicopter.getLoadableUnits().add(Assault_rifle);
+		support_helicopter.getLoadableUnits().add(Bazooka);
 		unitTypes.put(Support_helicopter, support_helicopter);
 
 		UnitType transport_ship = new UnitType();
@@ -867,6 +882,22 @@ public class UnitInitiation {
 		transport_ship.setCanCapture(false);
 		Map<Integer, Double> damageValuesTransport_ship = new HashMap<>();
 		transport_ship.setDamageValues(damageValuesTransport_ship);
+		transport_ship.setLoadCapacity(2);
+		transport_ship.setUnloadedCanMove(true);
+		transport_ship.setRefuelsLoaded(false);
+		transport_ship.getLoadableUnits().add(Assault_rifle);
+		transport_ship.getLoadableUnits().add(Bazooka);
+		transport_ship.getLoadableUnits().add(Bike);
+		transport_ship.getLoadableUnits().add(Car);
+		transport_ship.getLoadableUnits().add(Supplier);
+		transport_ship.getLoadableUnits().add(Small_cannon);
+		transport_ship.getLoadableUnits().add(Big_cannon);
+		transport_ship.getLoadableUnits().add(Air_cannon);
+		transport_ship.getLoadableUnits().add(Mobile_flak);
+		transport_ship.getLoadableUnits().add(Small_tank);
+		transport_ship.getLoadableUnits().add(Big_tank);
+		transport_ship.getLoadableUnits().add(Super_tank);
+		transport_ship.getLoadableUnits().add(Giant_tank);
 		unitTypes.put(Transport_ship, transport_ship);
 
 		UnitType repair_ship = new UnitType();
@@ -890,6 +921,17 @@ public class UnitInitiation {
 		repair_ship.setCanCapture(false);
 		Map<Integer, Double> damageValuesRepair_ship = new HashMap<>();
 		repair_ship.setDamageValues(damageValuesRepair_ship);
+		repair_ship.setLoadCapacity(1);
+		repair_ship.setUnloadedCanMove(true);
+		repair_ship.setRefuelsLoaded(true);
+		repair_ship.setLoadedHealRate(1);
+		repair_ship.getLoadableUnits().add(Assault_rifle);
+		repair_ship.getLoadableUnits().add(Bazooka);
+		repair_ship.setNearbyRefuelRange(1);
+		repair_ship.setNearbyRefuelRepair(1);
+		repair_ship.setRefuelAbility(true);
+		repair_ship.setRefuelTurnStart(false);
+		repair_ship.setRefuelAll(false);
 		unitTypes.put(Repair_ship, repair_ship);
 
 		UnitType submarine = new UnitType();
@@ -1005,18 +1047,18 @@ public class UnitInitiation {
 		aircraft_carrier.setName("Aircraft_carrier");
 		aircraft_carrier.setGraphicsName("/units/Aircraft_carrier.svg");
 		aircraft_carrier.setMovementType(MovementType.DEEP_WATER);
-		aircraft_carrier.setMovement(1);
+		aircraft_carrier.setMovement(6);
 		aircraft_carrier.setBanned(false);
-		aircraft_carrier.setValue(280);
+		aircraft_carrier.setValue(250);
 		aircraft_carrier.setMaxAmmo(6);
 		aircraft_carrier.setMaxFuel(99);
 		aircraft_carrier.setFuelPerTurn(5);
 		aircraft_carrier.setDestroyOnFuelOut(false);
 		aircraft_carrier.setCanStealth(false);
-		aircraft_carrier.setAttackAfterMove(true);
+		aircraft_carrier.setAttackAfterMove(false);
 		aircraft_carrier.setCounterAttackMelee(false);
 		aircraft_carrier.setCounterAttackRanged(false);
-		aircraft_carrier.setMinRange(3);
+		aircraft_carrier.setMinRange(2);
 		aircraft_carrier.setMaxRange(7);
 		aircraft_carrier.setCanCapture(false);
 		Map<Integer, Double> damageValuesAircraft_carrier = new HashMap<>();
@@ -1027,6 +1069,16 @@ public class UnitInitiation {
 		damageValuesAircraft_carrier.put(Attack_helicopter, 0.D);
 		damageValuesAircraft_carrier.put(Support_helicopter, 0.D);
 		aircraft_carrier.setDamageValues(damageValuesAircraft_carrier);
+		aircraft_carrier.setLoadCapacity(4);
+		aircraft_carrier.setUnloadedCanMove(true);
+		aircraft_carrier.setRefuelsLoaded(true);
+		aircraft_carrier.setLoadedHealRate(2);
+		aircraft_carrier.getLoadableUnits().add(Fighter);
+		aircraft_carrier.getLoadableUnits().add(Stealth_fighter);
+		aircraft_carrier.getLoadableUnits().add(Bomber);
+		aircraft_carrier.getLoadableUnits().add(Flying_bomb);
+		aircraft_carrier.getLoadableUnits().add(Attack_helicopter);
+		aircraft_carrier.getLoadableUnits().add(Support_helicopter);
 		unitTypes.put(Aircraft_carrier, aircraft_carrier);
 
 		UnitType barrier_cannon = new UnitType();
