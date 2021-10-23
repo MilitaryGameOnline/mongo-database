@@ -1,4 +1,4 @@
-package online.militarygame.mongodatabase;
+package online.militarygame.mongodatabase.storage;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;
@@ -58,7 +58,8 @@ public class MongoStorage {
 		officialRuleSetCollection.replaceOne(filter, ruleSet, new UpdateOptions().upsert(true));
 	}
 
-	public static void main(String[] args) {
-		MongoStorage localhost = new MongoStorage("localhost", 27017);
+	public RuleSet getDefaultRules(){
+		Bson filter = Filters.eq("_id", RulesetIniation.DEFAULT_1_ID);
+		return officialRuleSetCollection.find().filter(filter).first();
 	}
 }
