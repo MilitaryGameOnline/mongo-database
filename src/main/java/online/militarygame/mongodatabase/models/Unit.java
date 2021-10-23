@@ -10,4 +10,60 @@ public class Unit {
 	private int player = 0;
 	private UnitStatus unitStatus = UnitStatus.MOVED;
 	private boolean hidden = false;
+
+	public int getTypeId() {
+		return typeId;
+	}
+
+	public void setTypeId(int typeId) {
+		this.typeId = typeId;
+	}
+
+	public double getHealth() {
+		return health;
+	}
+
+	public void setHealth(double health) {
+		this.health = health;
+	}
+
+	public int getFuelRemaining() {
+		return fuelRemaining;
+	}
+
+	public void setFuelRemaining(int fuelRemaining) {
+		this.fuelRemaining = fuelRemaining;
+	}
+
+	public int getAmmoRemaining() {
+		return ammoRemaining;
+	}
+
+	public void setAmmoRemaining(int ammoRemaining) {
+		this.ammoRemaining = ammoRemaining;
+	}
+
+	public int getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(int player) {
+		this.player = player;
+	}
+
+	public UnitStatus getUnitStatus() {
+		return unitStatus;
+	}
+
+	public void setUnitStatus(UnitStatus unitStatus) {
+		this.unitStatus = unitStatus;
+	}
+
+	public boolean isHidden() {
+		return hidden;
+	}
+
+	public void setHidden(boolean hidden) {
+		this.hidden = hidden;
+	}
 }

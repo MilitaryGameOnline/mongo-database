@@ -12,4 +12,12 @@ public class User {
 	String email = "email";
 
 	private Map<GameType, Double> rankings = new HashMap<>();
+
+	public User(long id, String name, String password, String email, Map<GameType, Double> rankings) {
+		this.id = id;
+		this.name = name;
+		this.password = password;
+		this.email = email;
+		this.rankings = rankings;
+	}
 }

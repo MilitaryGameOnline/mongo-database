@@ -7,7 +7,7 @@ import java.util.LinkedHashSet;
 import java.util.Map;
 
 public class TileType {
-	private int id;
+	private String id;
 	private String name = "Tile";
 	private String description = "Description";
 	private String graphicsPath = "/tiles/tile.svg";
@@ -18,18 +18,19 @@ public class TileType {
 	private boolean providesTech = false;
 	private boolean presidentOffice = false;
 
-	private Map<MovementType, Integer> movementTypeCosts = new HashMap<>();
+	
+	private Map<String, Integer> movementTypeCosts = new HashMap<>();
 	private LinkedHashSet<Integer> unitsCapableOfProducing = new LinkedHashSet<>();
 
 	private boolean canProduce(int unitId){
 		return unitsCapableOfProducing.contains(unitId);
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -97,11 +98,11 @@ public class TileType {
 		this.defenseRating = defenseRating;
 	}
 
-	public Map<MovementType, Integer> getMovementTypeCosts() {
+	public Map<String, Integer> getMovementTypeCosts() {
 		return movementTypeCosts;
 	}
 
-	public void setMovementTypeCosts(Map<MovementType, Integer> movementTypeCosts) {
+	public void setMovementTypeCosts(Map<String, Integer> movementTypeCosts) {
 		this.movementTypeCosts = movementTypeCosts;
 	}
 

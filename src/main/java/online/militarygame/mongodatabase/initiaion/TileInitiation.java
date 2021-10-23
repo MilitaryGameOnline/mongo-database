@@ -7,34 +7,34 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TileInitiation {
-	public static final int GRASS = 100;
-	public static final int ROAD = 200;
-	public static final int FOREST = 300;
-	public static final int MOUNTAIN = 400;
-	public static final int RIVER = 500;
+	public static final String GRASS = "100";
+	public static final String ROAD = "200";
+	public static final String FOREST = "300";
+	public static final String MOUNTAIN = "400";
+	public static final String RIVER = "500";
 
-	public static final int SHALLOW_WATER = 1000;
-	public static final int DEEP_WATER = 1200;
-	public static final int STRONG_CURRENT_WATER = 1300;
-	public static final int ROCK_WATER = 4300;
+	public static final String SHALLOW_WATER = "1000";
+	public static final String DEEP_WATER = "1200";
+	public static final String STRONG_CURRENT_WATER = "1300";
+	public static final String ROCK_WATER = "4300";
 
-	public static final int BARRIER = 2000;
-	public static final int BROKEN_BARRIER = 2100;
-	public static final int BREAKABLE_BARRIER = 2200;
+	public static final String BARRIER = "2000";
+	public static final String BROKEN_BARRIER = "2100";
+	public static final String BREAKABLE_BARRIER = "2200";
 
-	public static final int AIR = 3000;
+	public static final String AIR = "3000";
 
-	public static final int TOWN = 4000;
-	public static final int BARRACKS = 4100;
-	public static final int DOCK = 4200;
-	public static final int AIRPORT = 4300;
-	public static final int PRESIDENT_OFFICE = 4400;
-	public static final int UNIVERSITY = 4500;
-	public static final int TEMPLE = 4600;
+	public static final String TOWN = "4000";
+	public static final String BARRACKS = "4100";
+	public static final String DOCK = "4200";
+	public static final String AIRPORT = "4300";
+	public static final String PRESIDENT_OFFICE = "4400";
+	public static final String UNIVERSITY = "4500";
+	public static final String TEMPLE = "4600";
 
-	public static Map<Integer, TileType> makeTileTypeMap1()
+	public static Map<String, TileType> makeTileTypeMap1()
 	{
-		Map<Integer, TileType> tileTypeMap = new HashMap<>();
+		Map<String, TileType> tileTypeMap = new HashMap<>();
 
 		TileType grass = new TileType();
 		grass.setId(GRASS);
@@ -42,7 +42,7 @@ public class TileInitiation {
 		grass.setDescription("Does literally nothing");
 		grass.setGraphicsPath("/TileTypes/general.svg");
 		grass.setDefenseRating(1);
-		Map<MovementType, Integer> grassMovementCosts = new HashMap<>();
+		Map<String, Integer> grassMovementCosts = new HashMap<>();
 		grassMovementCosts.put(MovementType.FOOT, 1);
 		grassMovementCosts.put(MovementType.FOOT2, 2);
 		grassMovementCosts.put(MovementType.TIRE, 2);
@@ -63,7 +63,7 @@ public class TileInitiation {
 		road.setDescription("Road");
 		road.setGraphicsPath("/TileTypes/road.svg");
 		road.setDefenseRating(0);
-		Map<MovementType, Integer> roadMovementCosts = new HashMap<>();
+		Map<String, Integer> roadMovementCosts = new HashMap<>();
 		roadMovementCosts.put(MovementType.FOOT, 1);
 		roadMovementCosts.put(MovementType.FOOT2, 1);
 		roadMovementCosts.put(MovementType.TIRE, 1);
@@ -84,7 +84,7 @@ public class TileInitiation {
 		forest.setDescription("Forest");
 		forest.setGraphicsPath("/TileTypes/forest.svg");
 		forest.setDefenseRating(2);
-		Map<MovementType, Integer> forestMovementCosts = new HashMap<>();
+		Map<String, Integer> forestMovementCosts = new HashMap<>();
 		forestMovementCosts.put(MovementType.FOOT, 1);
 		forestMovementCosts.put(MovementType.FOOT2, 1);
 		forestMovementCosts.put(MovementType.TIRE, 3);
@@ -105,7 +105,7 @@ public class TileInitiation {
 		mountain.setDescription("Mountain");
 		mountain.setGraphicsPath("/TileTypes/mountain.svg");
 		mountain.setDefenseRating(4);
-		Map<MovementType, Integer> mountainMovementCosts = new HashMap<>();
+		Map<String, Integer> mountainMovementCosts = new HashMap<>();
 		mountainMovementCosts.put(MovementType.FOOT, 2);
 		mountainMovementCosts.put(MovementType.FOOT2, 1);
 		mountainMovementCosts.put(MovementType.TIRE, null);
@@ -126,7 +126,7 @@ public class TileInitiation {
 		river.setDescription("River");
 		river.setGraphicsPath("/TileTypes/river.svg");
 		river.setDefenseRating(0);
-		Map<MovementType, Integer> riverMovementCosts = new HashMap<>();
+		Map<String, Integer> riverMovementCosts = new HashMap<>();
 		riverMovementCosts.put(MovementType.FOOT, 1);
 		riverMovementCosts.put(MovementType.FOOT2, 2);
 		riverMovementCosts.put(MovementType.TIRE, null);
@@ -147,7 +147,7 @@ public class TileInitiation {
 		shallow_water.setDescription("Shallow_water");
 		shallow_water.setGraphicsPath("/TileTypes/shallow_water.svg");
 		shallow_water.setDefenseRating(0);
-		Map<MovementType, Integer> shallow_waterMovementCosts = new HashMap<>();
+		Map<String, Integer> shallow_waterMovementCosts = new HashMap<>();
 		shallow_waterMovementCosts.put(MovementType.FOOT, 1);
 		shallow_waterMovementCosts.put(MovementType.FOOT2, 1);
 		shallow_waterMovementCosts.put(MovementType.TIRE, 1);
@@ -168,7 +168,7 @@ public class TileInitiation {
 		deep_water.setDescription("Deep_water");
 		deep_water.setGraphicsPath("/TileTypes/deep_water.svg");
 		deep_water.setDefenseRating(0);
-		Map<MovementType, Integer> deep_waterMovementCosts = new HashMap<>();
+		Map<String, Integer> deep_waterMovementCosts = new HashMap<>();
 		deep_waterMovementCosts.put(MovementType.FOOT, null);
 		deep_waterMovementCosts.put(MovementType.FOOT2, null);
 		deep_waterMovementCosts.put(MovementType.TIRE, null);
@@ -189,7 +189,7 @@ public class TileInitiation {
 		strongCurrentWater.setDescription("Strong current water");
 		strongCurrentWater.setGraphicsPath("/TileTypes/strong_current_water.svg");
 		strongCurrentWater.setDefenseRating(0);
-		Map<MovementType, Integer> strongCurrentMovementCosts = new HashMap<>();
+		Map<String, Integer> strongCurrentMovementCosts = new HashMap<>();
 		strongCurrentMovementCosts.put(MovementType.FOOT, null);
 		strongCurrentMovementCosts.put(MovementType.FOOT2, null);
 		strongCurrentMovementCosts.put(MovementType.TIRE, null);
@@ -210,7 +210,7 @@ public class TileInitiation {
 		rockWater.setDescription("Rock water");
 		rockWater.setGraphicsPath("/TileTypes/rock_water.svg");
 		rockWater.setDefenseRating(1);
-		Map<MovementType, Integer> rockWaterMovementCosts = new HashMap<>();
+		Map<String, Integer> rockWaterMovementCosts = new HashMap<>();
 		rockWaterMovementCosts.put(MovementType.FOOT, null);
 		rockWaterMovementCosts.put(MovementType.FOOT2, null);
 		rockWaterMovementCosts.put(MovementType.TIRE, null);
@@ -231,7 +231,7 @@ public class TileInitiation {
 		barrier.setDescription("Barrier");
 		barrier.setGraphicsPath("/TileTypes/barrier.svg");
 		barrier.setDefenseRating(0);
-		Map<MovementType, Integer> barrierMovementCosts = new HashMap<>();
+		Map<String, Integer> barrierMovementCosts = new HashMap<>();
 		barrierMovementCosts.put(MovementType.FOOT, null);
 		barrierMovementCosts.put(MovementType.FOOT2, null);
 		barrierMovementCosts.put(MovementType.TIRE, null);
@@ -252,7 +252,7 @@ public class TileInitiation {
 		broken_barrier.setDescription("Broken_barrier");
 		broken_barrier.setGraphicsPath("/TileTypes/broken_barrier.svg");
 		broken_barrier.setDefenseRating(1);
-		Map<MovementType, Integer> broken_barrierMovementCosts = new HashMap<>();
+		Map<String, Integer> broken_barrierMovementCosts = new HashMap<>();
 		broken_barrierMovementCosts.put(MovementType.FOOT, 1);
 		broken_barrierMovementCosts.put(MovementType.FOOT2, 1);
 		broken_barrierMovementCosts.put(MovementType.TIRE, 2);
@@ -273,7 +273,7 @@ public class TileInitiation {
 		breakable_barrier.setDescription("Breakable_barrier");
 		breakable_barrier.setGraphicsPath("/TileTypes/breakable_barrier.svg");
 		breakable_barrier.setDefenseRating(0);
-		Map<MovementType, Integer> breakable_barrierMovementCosts = new HashMap<>();
+		Map<String, Integer> breakable_barrierMovementCosts = new HashMap<>();
 		breakable_barrierMovementCosts.put(MovementType.FOOT, null);
 		breakable_barrierMovementCosts.put(MovementType.FOOT2, null);
 		breakable_barrierMovementCosts.put(MovementType.TIRE, null);
@@ -294,7 +294,7 @@ public class TileInitiation {
 		air.setDescription("Air");
 		air.setGraphicsPath("/TileTypes/air.svg");
 		air.setDefenseRating(0);
-		Map<MovementType, Integer> airMovementCosts = new HashMap<>();
+		Map<String, Integer> airMovementCosts = new HashMap<>();
 		airMovementCosts.put(MovementType.FOOT, null);
 		airMovementCosts.put(MovementType.FOOT2, null);
 		airMovementCosts.put(MovementType.TIRE, null);
@@ -315,7 +315,7 @@ public class TileInitiation {
 		town.setDescription("Town");
 		town.setGraphicsPath("/TileTypes/town.svg");
 		town.setDefenseRating(3);
-		Map<MovementType, Integer> townMovementCosts = new HashMap<>();
+		Map<String, Integer> townMovementCosts = new HashMap<>();
 		townMovementCosts.put(MovementType.FOOT, 1);
 		townMovementCosts.put(MovementType.FOOT2, 1);
 		townMovementCosts.put(MovementType.TIRE, 1);
@@ -336,7 +336,7 @@ public class TileInitiation {
 		barracks.setDescription("Barracks");
 		barracks.setGraphicsPath("/TileTypes/barracks.svg");
 		barracks.setDefenseRating(3);
-		Map<MovementType, Integer> barracksMovementCosts = new HashMap<>();
+		Map<String, Integer> barracksMovementCosts = new HashMap<>();
 		barracksMovementCosts.put(MovementType.FOOT, 1);
 		barracksMovementCosts.put(MovementType.FOOT2, 1);
 		barracksMovementCosts.put(MovementType.TIRE, 1);
@@ -357,7 +357,7 @@ public class TileInitiation {
 		dock.setDescription("Dock");
 		dock.setGraphicsPath("/TileTypes/dock.svg");
 		dock.setDefenseRating(3);
-		Map<MovementType, Integer> dockMovementCosts = new HashMap<>();
+		Map<String, Integer> dockMovementCosts = new HashMap<>();
 		dockMovementCosts.put(MovementType.FOOT, 1);
 		dockMovementCosts.put(MovementType.FOOT2, 1);
 		dockMovementCosts.put(MovementType.TIRE, 1);
@@ -378,7 +378,7 @@ public class TileInitiation {
 		airport.setDescription("Airport");
 		airport.setGraphicsPath("/TileTypes/airport.svg");
 		airport.setDefenseRating(3);
-		Map<MovementType, Integer> airportMovementCosts = new HashMap<>();
+		Map<String, Integer> airportMovementCosts = new HashMap<>();
 		airportMovementCosts.put(MovementType.FOOT, 1);
 		airportMovementCosts.put(MovementType.FOOT2, 1);
 		airportMovementCosts.put(MovementType.TIRE, 1);
@@ -399,7 +399,7 @@ public class TileInitiation {
 		president_office.setDescription("President_office");
 		president_office.setGraphicsPath("/TileTypes/president_office.svg");
 		president_office.setDefenseRating(4);
-		Map<MovementType, Integer> president_officeMovementCosts = new HashMap<>();
+		Map<String, Integer> president_officeMovementCosts = new HashMap<>();
 		president_officeMovementCosts.put(MovementType.FOOT, 1);
 		president_officeMovementCosts.put(MovementType.FOOT2, 1);
 		president_officeMovementCosts.put(MovementType.TIRE, 1);
@@ -420,7 +420,7 @@ public class TileInitiation {
 		university.setDescription("University");
 		university.setGraphicsPath("/TileTypes/university.svg");
 		university.setDefenseRating(3);
-		Map<MovementType, Integer> universityMovementCosts = new HashMap<>();
+		Map<String, Integer> universityMovementCosts = new HashMap<>();
 		universityMovementCosts.put(MovementType.FOOT, 1);
 		universityMovementCosts.put(MovementType.FOOT2, 1);
 		universityMovementCosts.put(MovementType.TIRE, 1);
@@ -441,7 +441,7 @@ public class TileInitiation {
 		temple.setDescription("Temple");
 		temple.setGraphicsPath("/TileTypes/temple.svg");
 		temple.setDefenseRating(3);
-		Map<MovementType, Integer> templeMovementCosts = new HashMap<>();
+		Map<String, Integer> templeMovementCosts = new HashMap<>();
 		templeMovementCosts.put(MovementType.FOOT, 1);
 		templeMovementCosts.put(MovementType.FOOT2, 1);
 		templeMovementCosts.put(MovementType.TIRE, 1);
@@ -460,7 +460,7 @@ public class TileInitiation {
 		return tileTypeMap;
 	}
 
-	private static void putToMap(TileType TileType, Map<Integer, TileType> TileTypeMap) {
+	private static void putToMap(TileType TileType, Map<String, TileType> TileTypeMap) {
 		TileTypeMap.put(TileType.getId(), TileType);
 	}
 }

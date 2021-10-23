@@ -7,37 +7,37 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class UnitInitiation {
-	public static final int Assault_rifle = 100;
-	public static final int Bazooka = 200;
-	public static final int Bike = 300;
-	public static final int Combat_Jeep = 400;
-	public static final int Supplier = 500;
-	public static final int Small_cannon = 600;
-	public static final int Big_cannon = 700;
-	public static final int Air_cannon = 800;
-	public static final int Mobile_flak = 900;
-	public static final int Small_tank = 1000;
-	public static final int Big_tank = 1100;
-	public static final int Super_tank = 1200;
-	public static final int Giant_tank = 1300;
-	public static final int Fighter = 10000;
-	public static final int Stealth_fighter = 10100;
-	public static final int Bomber = 10200;
-	public static final int Flying_bomb = 10300;
-	public static final int Attack_helicopter = 10400;
-	public static final int Support_helicopter = 10500;
-	public static final int Transport_ship = 20000;
-	public static final int Repair_ship = 20100;
-	public static final int Submarine = 20200;
-	public static final int Combat_ship = 20300;
-	public static final int Cannon_ship = 20400;
-	public static final int Aircraft_carrier = 20500;
+	public static final String Assault_rifle = "100";
+	public static final String Bazooka = "200";
+	public static final String Bike = "300";
+	public static final String Combat_Jeep = "400";
+	public static final String Supplier = "500";
+	public static final String Small_cannon = "600";
+	public static final String Big_cannon = "700";
+	public static final String Air_cannon = "800";
+	public static final String Mobile_flak = "900";
+	public static final String Small_tank = "1000";
+	public static final String Big_tank = "1100";
+	public static final String Super_tank = "1200";
+	public static final String Giant_tank = "1300";
+	public static final String Fighter = "10000";
+	public static final String Stealth_fighter = "10100";
+	public static final String Bomber = "10200";
+	public static final String Flying_bomb = "10300";
+	public static final String Attack_helicopter = "10400";
+	public static final String Support_helicopter = "10500";
+	public static final String Transport_ship = "20000";
+	public static final String Repair_ship = "20100";
+	public static final String Submarine = "20200";
+	public static final String Combat_ship = "20300";
+	public static final String Cannon_ship = "20400";
+	public static final String Aircraft_carrier = "20500";
 
-	public static final int Barrier_cannon = 30000;
+	public static final String Barrier_cannon = "30000";
 
-	public static Map<Integer, UnitType> makeUnitTypeMap1()
+	public static Map<String, UnitType> makeUnitTypeMap1()
 	{
-		Map<Integer, UnitType> unitTypes = new HashMap<>();
+		Map<String, UnitType> unitTypes = new HashMap<>();
 
 		UnitType assault_rifle = new UnitType();
 		assault_rifle.setId(Assault_rifle);
@@ -58,7 +58,7 @@ public class UnitInitiation {
 		assault_rifle.setMinRange(1);
 		assault_rifle.setMaxRange(1);
 		assault_rifle.setCanCapture(true);
-		Map<Integer, Double> damageValuesAssault_rifle = new HashMap<>();
+		Map<String, Double> damageValuesAssault_rifle = new HashMap<>();
 		damageValuesAssault_rifle.put(Assault_rifle, 55D);
 		damageValuesAssault_rifle.put(Bazooka, 45D);
 		damageValuesAssault_rifle.put(Combat_Jeep, 12D);
@@ -96,7 +96,7 @@ public class UnitInitiation {
 		bazooka.setMinRange(1);
 		bazooka.setMaxRange(1);
 		bazooka.setCanCapture(true);
-		Map<Integer, Double> damageValuesBazooka = new HashMap<>();
+		Map<String, Double> damageValuesBazooka = new HashMap<>();
 		damageValuesBazooka.put(Combat_Jeep, 85D);
 		damageValuesBazooka.put(Supplier, 75D);
 		damageValuesBazooka.put(Small_cannon, 70D);
@@ -109,7 +109,7 @@ public class UnitInitiation {
 		damageValuesBazooka.put(Giant_tank, 5D);
 		damageValuesBazooka.put(Barrier_cannon, 55D);
 		bazooka.setDamageValues(damageValuesBazooka);
-		Map<Integer, Double> secondaryDamageValuesBazooka = new HashMap<>();
+		Map<String, Double> secondaryDamageValuesBazooka = new HashMap<>();
 		secondaryDamageValuesBazooka.put(Assault_rifle, 65D);
 		secondaryDamageValuesBazooka.put(Bazooka, 55D);
 		secondaryDamageValuesBazooka.put(Combat_Jeep, 12D);
@@ -149,7 +149,7 @@ public class UnitInitiation {
 //		bike.setMinRange(1);
 //		bike.setMaxRange(1);
 //		bike.setCanCapture(false);
-//		Map<Integer, Double> damageValuesBike = new HashMap<>();
+//		Map<String, Double> damageValuesBike = new HashMap<>();
 //		damageValuesBike.put(Assault_rifle, 0D);
 //		damageValuesBike.put(Bazooka, 0D);
 //		damageValuesBike.put(Bike, 0D);
@@ -197,7 +197,7 @@ public class UnitInitiation {
 		combat_Jeep.setMinRange(1);
 		combat_Jeep.setMaxRange(1);
 		combat_Jeep.setCanCapture(false);
-		Map<Integer, Double> damageValuesCombat_Jeep = new HashMap<>();
+		Map<String, Double> damageValuesCombat_Jeep = new HashMap<>();
 		damageValuesCombat_Jeep.put(Assault_rifle, 70D);
 		damageValuesCombat_Jeep.put(Bazooka, 65D);
 		damageValuesCombat_Jeep.put(Combat_Jeep, 45D);
@@ -235,7 +235,7 @@ public class UnitInitiation {
 		supplier.setMinRange(0);
 		supplier.setMaxRange(0);
 		supplier.setCanCapture(false);
-		Map<Integer, Double> damageValuesSupplier = new HashMap<>();
+		Map<String, Double> damageValuesSupplier = new HashMap<>();
 		supplier.setDamageValues(damageValuesSupplier);
 		supplier.setLoadCapacity(1);
 		supplier.setRefuelsLoaded(true);
@@ -266,7 +266,7 @@ public class UnitInitiation {
 		small_cannon.setMinRange(2);
 		small_cannon.setMaxRange(3);
 		small_cannon.setCanCapture(false);
-		Map<Integer, Double> damageValuesSmall_cannon = new HashMap<>();
+		Map<String, Double> damageValuesSmall_cannon = new HashMap<>();
 		damageValuesSmall_cannon.put(Assault_rifle, 90D);
 		damageValuesSmall_cannon.put(Bazooka, 85D);
 		damageValuesSmall_cannon.put(Combat_Jeep, 80D);
@@ -309,7 +309,7 @@ public class UnitInitiation {
 		big_cannon.setMinRange(3);
 		big_cannon.setMaxRange(5);
 		big_cannon.setCanCapture(false);
-		Map<Integer, Double> damageValuesBig_cannon = new HashMap<>();
+		Map<String, Double> damageValuesBig_cannon = new HashMap<>();
 		damageValuesBig_cannon.put(Assault_rifle, 95D);
 		damageValuesBig_cannon.put(Bazooka, 90D);
 		damageValuesBig_cannon.put(Combat_Jeep, 90D);
@@ -351,7 +351,7 @@ public class UnitInitiation {
 		air_cannon.setMinRange(3);
 		air_cannon.setMaxRange(6);
 		air_cannon.setCanCapture(false);
-		Map<Integer, Double> damageValuesAir_cannon = new HashMap<>();
+		Map<String, Double> damageValuesAir_cannon = new HashMap<>();
 		damageValuesAir_cannon.put(Fighter, 100D);
 		damageValuesAir_cannon.put(Stealth_fighter, 100D);
 		damageValuesAir_cannon.put(Bomber, 100D);
@@ -380,7 +380,7 @@ public class UnitInitiation {
 		mobile_flak.setMinRange(1);
 		mobile_flak.setMaxRange(1);
 		mobile_flak.setCanCapture(false);
-		Map<Integer, Double> damageValuesMobile_flak = new HashMap<>();
+		Map<String, Double> damageValuesMobile_flak = new HashMap<>();
 		damageValuesMobile_flak.put(Assault_rifle, 105D);
 		damageValuesMobile_flak.put(Bazooka, 15D);
 		damageValuesMobile_flak.put(Combat_Jeep, 60D);
@@ -422,7 +422,7 @@ public class UnitInitiation {
 		small_tank.setMinRange(1);
 		small_tank.setMaxRange(1);
 		small_tank.setCanCapture(false);
-		Map<Integer, Double> damageValuesSmall_tank = new HashMap<>();
+		Map<String, Double> damageValuesSmall_tank = new HashMap<>();
 		damageValuesSmall_tank.put(Combat_Jeep, 85D);
 		damageValuesSmall_tank.put(Supplier, 75D);
 		damageValuesSmall_tank.put(Small_cannon, 70D);
@@ -441,7 +441,7 @@ public class UnitInitiation {
 		damageValuesSmall_tank.put(Aircraft_carrier, 1D);
 		damageValuesSmall_tank.put(Barrier_cannon, 55D);
 		small_tank.setDamageValues(damageValuesSmall_tank);
-		Map<Integer, Double> secondaryValuesSmall_tank = new HashMap<>();
+		Map<String, Double> secondaryValuesSmall_tank = new HashMap<>();
 		secondaryValuesSmall_tank.put(Assault_rifle, 75D);
 		secondaryValuesSmall_tank.put(Bazooka, 70D);
 		secondaryValuesSmall_tank.put(Combat_Jeep, 12D);
@@ -479,7 +479,7 @@ public class UnitInitiation {
 		big_tank.setMinRange(1);
 		big_tank.setMaxRange(1);
 		big_tank.setCanCapture(false);
-		Map<Integer, Double> damageValuesBig_tank = new HashMap<>();
+		Map<String, Double> damageValuesBig_tank = new HashMap<>();
 		damageValuesBig_tank.put(Combat_Jeep, 105D);
 		damageValuesBig_tank.put(Supplier, 105D);
 		damageValuesBig_tank.put(Small_cannon, 105D);
@@ -498,7 +498,7 @@ public class UnitInitiation {
 		damageValuesBig_tank.put(Aircraft_carrier, 10D);
 		damageValuesBig_tank.put(Barrier_cannon, 85D);
 		big_tank.setDamageValues(damageValuesBig_tank);
-		Map<Integer, Double> secondaryDamageValuesBig_tank = new HashMap<>();
+		Map<String, Double> secondaryDamageValuesBig_tank = new HashMap<>();
 		secondaryDamageValuesBig_tank.put(Assault_rifle, 105D);
 		secondaryDamageValuesBig_tank.put(Bazooka, 95D);
 		secondaryDamageValuesBig_tank.put(Combat_Jeep, 12D);
@@ -536,7 +536,7 @@ public class UnitInitiation {
 		super_tank.setMinRange(1);
 		super_tank.setMaxRange(1);
 		super_tank.setCanCapture(false);
-		Map<Integer, Double> damageValuesSuper_tank = new HashMap<>();
+		Map<String, Double> damageValuesSuper_tank = new HashMap<>();
 		damageValuesSuper_tank.put(Combat_Jeep, 125D);
 		damageValuesSuper_tank.put(Supplier, 125D);
 		damageValuesSuper_tank.put(Small_cannon, 115D);
@@ -555,7 +555,7 @@ public class UnitInitiation {
 		damageValuesSuper_tank.put(Aircraft_carrier, 15D);
 		damageValuesSuper_tank.put(Barrier_cannon, 105D);
 		super_tank.setDamageValues(damageValuesSuper_tank);
-		Map<Integer, Double> secondaryDamageValuesSuper_tank = new HashMap<>();
+		Map<String, Double> secondaryDamageValuesSuper_tank = new HashMap<>();
 		damageValuesSuper_tank.put(Assault_rifle, 125D);
 		damageValuesSuper_tank.put(Bazooka, 115D);
 		damageValuesSuper_tank.put(Combat_Jeep, 12D);
@@ -593,7 +593,7 @@ public class UnitInitiation {
 		giant_tank.setMinRange(1);
 		giant_tank.setMaxRange(1);
 		giant_tank.setCanCapture(false);
-		Map<Integer, Double> damageValuesGiant_tank = new HashMap<>();
+		Map<String, Double> damageValuesGiant_tank = new HashMap<>();
 		damageValuesGiant_tank.put(Combat_Jeep, 195D);
 		damageValuesGiant_tank.put(Supplier, 195D);
 		damageValuesGiant_tank.put(Small_cannon, 195D);
@@ -612,7 +612,7 @@ public class UnitInitiation {
 		damageValuesGiant_tank.put(Aircraft_carrier, 45D);
 		damageValuesGiant_tank.put(Barrier_cannon, 180D);
 		giant_tank.setDamageValues(damageValuesGiant_tank);
-		Map<Integer, Double> secondaryValuesGiant_tank = new HashMap<>();
+		Map<String, Double> secondaryValuesGiant_tank = new HashMap<>();
 		damageValuesGiant_tank.put(Assault_rifle, 135D);
 		damageValuesGiant_tank.put(Bazooka, 125D);
 		damageValuesGiant_tank.put(Combat_Jeep, 12D);
@@ -651,7 +651,7 @@ public class UnitInitiation {
 		fighter.setMinRange(1);
 		fighter.setMaxRange(1);
 		fighter.setCanCapture(false);
-		Map<Integer, Double> damageValuesFighter = new HashMap<>();
+		Map<String, Double> damageValuesFighter = new HashMap<>();
 		damageValuesFighter.put(Fighter, 55D);
 		damageValuesFighter.put(Stealth_fighter, 85D);
 		damageValuesFighter.put(Bomber, 100D);
@@ -681,7 +681,7 @@ public class UnitInitiation {
 		stealth_fighter.setMinRange(1);
 		stealth_fighter.setMaxRange(1);
 		stealth_fighter.setCanCapture(false);
-		Map<Integer, Double> damageValuesStealth_fighter = new HashMap<>();
+		Map<String, Double> damageValuesStealth_fighter = new HashMap<>();
 		damageValuesStealth_fighter.put(Assault_rifle, 90D);
 		damageValuesStealth_fighter.put(Bazooka, 90D);
 		damageValuesStealth_fighter.put(Combat_Jeep, 85D);
@@ -729,7 +729,7 @@ public class UnitInitiation {
 		bomber.setMinRange(1);
 		bomber.setMaxRange(1);
 		bomber.setCanCapture(false);
-		Map<Integer, Double> damageValuesBomber = new HashMap<>();
+		Map<String, Double> damageValuesBomber = new HashMap<>();
 		damageValuesBomber.put(Assault_rifle, 110D);
 		damageValuesBomber.put(Bazooka, 110D);
 		damageValuesBomber.put(Combat_Jeep, 105D);
@@ -771,7 +771,7 @@ public class UnitInitiation {
 		flying_bomb.setMinRange(0);
 		flying_bomb.setMaxRange(0);
 		flying_bomb.setCanCapture(false);
-		Map<Integer, Double> damageValuesFlying_bomb = new HashMap<>();
+		Map<String, Double> damageValuesFlying_bomb = new HashMap<>();
 		flying_bomb.setDamageValues(damageValuesFlying_bomb);
 		flying_bomb.setSelfDestructAbilityRange(3);
 		flying_bomb.setSelfDestructAbilityDamage(50);
@@ -796,7 +796,7 @@ public class UnitInitiation {
 		attack_helicopter.setMinRange(1);
 		attack_helicopter.setMaxRange(1);
 		attack_helicopter.setCanCapture(false);
-		Map<Integer, Double> damageValuesAttack_helicopter = new HashMap<>();
+		Map<String, Double> damageValuesAttack_helicopter = new HashMap<>();
 		damageValuesAttack_helicopter.put(Combat_Jeep, 55D);
 		damageValuesAttack_helicopter.put(Supplier, 60D);
 		damageValuesAttack_helicopter.put(Small_cannon, 65D);
@@ -815,7 +815,7 @@ public class UnitInitiation {
 		damageValuesAttack_helicopter.put(Aircraft_carrier, 25D);
 		damageValuesAttack_helicopter.put(Barrier_cannon, 55D);
 		attack_helicopter.setDamageValues(damageValuesAttack_helicopter);
-		Map<Integer, Double> secondaryDamageValuesAttack_helicopter = new HashMap<>();
+		Map<String, Double> secondaryDamageValuesAttack_helicopter = new HashMap<>();
 		damageValuesAttack_helicopter.put(Assault_rifle, 75D);
 		damageValuesAttack_helicopter.put(Bazooka, 75D);
 		damageValuesAttack_helicopter.put(Combat_Jeep, 12D);
@@ -853,7 +853,7 @@ public class UnitInitiation {
 		support_helicopter.setMinRange(0);
 		support_helicopter.setMaxRange(0);
 		support_helicopter.setCanCapture(false);
-		Map<Integer, Double> damageValuesSupport_helicopter = new HashMap<>();
+		Map<String, Double> damageValuesSupport_helicopter = new HashMap<>();
 		support_helicopter.setDamageValues(damageValuesSupport_helicopter);
 		support_helicopter.setLoadCapacity(1);
 		support_helicopter.setUnloadedCanMove(false);
@@ -881,7 +881,7 @@ public class UnitInitiation {
 		transport_ship.setMinRange(0);
 		transport_ship.setMaxRange(0);
 		transport_ship.setCanCapture(false);
-		Map<Integer, Double> damageValuesTransport_ship = new HashMap<>();
+		Map<String, Double> damageValuesTransport_ship = new HashMap<>();
 		transport_ship.setDamageValues(damageValuesTransport_ship);
 		transport_ship.setLoadCapacity(2);
 		transport_ship.setUnloadedCanMove(true);
@@ -919,7 +919,7 @@ public class UnitInitiation {
 		repair_ship.setMinRange(0);
 		repair_ship.setMaxRange(0);
 		repair_ship.setCanCapture(false);
-		Map<Integer, Double> damageValuesRepair_ship = new HashMap<>();
+		Map<String, Double> damageValuesRepair_ship = new HashMap<>();
 		repair_ship.setDamageValues(damageValuesRepair_ship);
 		repair_ship.setLoadCapacity(1);
 		repair_ship.setUnloadedCanMove(true);
@@ -954,7 +954,7 @@ public class UnitInitiation {
 		submarine.setMinRange(1);
 		submarine.setMaxRange(1);
 		submarine.setCanCapture(false);
-		Map<Integer, Double> damageValuesSubmarine = new HashMap<>();
+		Map<String, Double> damageValuesSubmarine = new HashMap<>();
 		damageValuesSubmarine.put(Transport_ship, 95D);
 		damageValuesSubmarine.put(Repair_ship, 95D);
 		damageValuesSubmarine.put(Submarine, 55D);
@@ -984,7 +984,7 @@ public class UnitInitiation {
 		combat_ship.setMinRange(1);
 		combat_ship.setMaxRange(1);
 		combat_ship.setCanCapture(false);
-		Map<Integer, Double> damageValuesCombat_ship = new HashMap<>();
+		Map<String, Double> damageValuesCombat_ship = new HashMap<>();
 		damageValuesCombat_ship.put(Transport_ship, 25D);
 		damageValuesCombat_ship.put(Repair_ship, 25D);
 		damageValuesCombat_ship.put(Submarine, 90D);
@@ -992,7 +992,7 @@ public class UnitInitiation {
 		damageValuesCombat_ship.put(Cannon_ship, 5D);
 		damageValuesCombat_ship.put(Aircraft_carrier, 5D);
 		combat_ship.setDamageValues(damageValuesCombat_ship);
-		Map<Integer, Double> secondaryDamageValuesCombat_ship = new HashMap<>();
+		Map<String, Double> secondaryDamageValuesCombat_ship = new HashMap<>();
 		damageValuesCombat_ship.put(Fighter, 55D);
 		damageValuesCombat_ship.put(Stealth_fighter, 100D);
 		damageValuesCombat_ship.put(Bomber, 65D);
@@ -1021,7 +1021,7 @@ public class UnitInitiation {
 		cannon_ship.setMinRange(3);
 		cannon_ship.setMaxRange(5);
 		cannon_ship.setCanCapture(false);
-		Map<Integer, Double> damageValuesCannon_ship = new HashMap<>();
+		Map<String, Double> damageValuesCannon_ship = new HashMap<>();
 		damageValuesCannon_ship.put(Assault_rifle, 95D);
 		damageValuesCannon_ship.put(Bazooka, 90D);
 		damageValuesCannon_ship.put(Combat_Jeep, 90D);
@@ -1063,7 +1063,7 @@ public class UnitInitiation {
 		aircraft_carrier.setMinRange(2);
 		aircraft_carrier.setMaxRange(7);
 		aircraft_carrier.setCanCapture(false);
-		Map<Integer, Double> damageValuesAircraft_carrier = new HashMap<>();
+		Map<String, Double> damageValuesAircraft_carrier = new HashMap<>();
 		damageValuesAircraft_carrier.put(Fighter, 100D);
 		damageValuesAircraft_carrier.put(Stealth_fighter, 100D);
 		damageValuesAircraft_carrier.put(Bomber, 100D);
@@ -1102,7 +1102,7 @@ public class UnitInitiation {
 		barrier_cannon.setMinRange(2);
 		barrier_cannon.setMaxRange(5);
 		barrier_cannon.setCanCapture(false);
-		Map<Integer, Double> damageValuesBarrier_cannon = new HashMap<>();
+		Map<String, Double> damageValuesBarrier_cannon = new HashMap<>();
 		damageValuesBarrier_cannon.put(Assault_rifle, 95D);
 		damageValuesBarrier_cannon.put(Bazooka, 90D);
 		damageValuesBarrier_cannon.put(Combat_Jeep, 90D);

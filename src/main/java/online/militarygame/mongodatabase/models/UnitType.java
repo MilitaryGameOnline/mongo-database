@@ -8,11 +8,11 @@ import java.util.Map;
 import java.util.Set;
 
 public class UnitType {
-	private int id;
+	private String id;
 	private String name = "New unit";
 	private String graphicsName = "/units/default.svg";
 
-	private MovementType movementType = MovementType.FOOT;
+	private String movementType = MovementType.FOOT;
 	private int movement = 1;
 	private boolean banned = false;
 
@@ -34,14 +34,14 @@ public class UnitType {
 
 	private boolean canCapture = false;
 
-	private Map<Integer, Double> damageValues = new HashMap<>();
-	private Map<Integer, Double> secondaryDamageValues = new HashMap<>();
+	private Map<String, Double> damageValues = new HashMap<>();
+	private Map<String, Double> secondaryDamageValues = new HashMap<>();
 
 	private int loadCapacity = 0;
 	private boolean unloadedCanMove = false;
 	private boolean refuelsLoaded = true;
 	private double loadedHealRate = 0;
-	private Set<Integer> loadableUnits = new HashSet<>();
+	private Set<String> loadableUnits = new HashSet<>();
 
 	private int nearbyRefuelRange = 0;
 	private double nearbyRefuelRepair = 0;
@@ -52,11 +52,11 @@ public class UnitType {
 	private int selfDestructAbilityRange = 0;
 	private double selfDestructAbilityDamage = 0;
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -76,11 +76,11 @@ public class UnitType {
 		this.graphicsName = graphicsName;
 	}
 
-	public MovementType getMovementType() {
+	public String getMovementType() {
 		return movementType;
 	}
 
-	public void setMovementType(MovementType movementType) {
+	public void setMovementType(String movementType) {
 		this.movementType = movementType;
 	}
 	public int getMovement() {
@@ -203,19 +203,19 @@ public class UnitType {
 		this.canCapture = canCapture;
 	}
 
-	public Map<Integer, Double> getDamageValues() {
+	public Map<String, Double> getDamageValues() {
 		return damageValues;
 	}
 
-	public void setDamageValues(Map<Integer, Double> damageValues) {
+	public void setDamageValues(Map<String, Double> damageValues) {
 		this.damageValues = damageValues;
 	}
 
-	public Map<Integer, Double> getSecondaryDamageValues() {
+	public Map<String, Double> getSecondaryDamageValues() {
 		return secondaryDamageValues;
 	}
 
-	public void setSecondaryDamageValues(Map<Integer, Double> secondaryDamageValues) {
+	public void setSecondaryDamageValues(Map<String, Double> secondaryDamageValues) {
 		this.secondaryDamageValues = secondaryDamageValues;
 	}
 
@@ -227,11 +227,11 @@ public class UnitType {
 		this.loadCapacity = loadCapacity;
 	}
 
-	public Set<Integer> getLoadableUnits() {
+	public Set<String> getLoadableUnits() {
 		return loadableUnits;
 	}
 
-	public void setLoadableUnits(Set<Integer> loadableUnits) {
+	public void setLoadableUnits(Set<String> loadableUnits) {
 		this.loadableUnits = loadableUnits;
 	}
 

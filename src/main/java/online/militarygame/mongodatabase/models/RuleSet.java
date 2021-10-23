@@ -3,9 +3,7 @@ package online.militarygame.mongodatabase.models;
 
 import online.militarygame.mongodatabase.enums.GameType;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class RuleSet {
@@ -14,11 +12,11 @@ public class RuleSet {
 	private boolean customRuleSet = false;
 
 	//Unit id, unit type map
-	private Map<Integer, UnitType> unitTypes = new HashMap<>();
+	private Map<String, UnitType> unitTypes = new HashMap<>();
 	//Tile id, tile type map;
-	private Map<Integer, TileType> tileTypes = new HashMap<>();
+	private Map<String, TileType> tileTypes = new HashMap<>();
 
-	private Map<Integer, Commander> availableCommanders = new HashMap<>();
+	private Map<String, Commander> availableCommanders = new HashMap<>();
 
 	private GameType gameType = GameType.STANDARD;
 
@@ -33,4 +31,140 @@ public class RuleSet {
 
 	private double moneyPerCapture = 10;
 	private int pointsToCapture = 20;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public boolean isCustomRuleSet() {
+		return customRuleSet;
+	}
+
+	public void setCustomRuleSet(boolean customRuleSet) {
+		this.customRuleSet = customRuleSet;
+	}
+
+	public Map<String, UnitType> getUnitTypes() {
+		return unitTypes;
+	}
+
+	public void setUnitTypes(Map<String, UnitType> unitTypes) {
+		this.unitTypes = unitTypes;
+	}
+
+	public Map<String, TileType> getTileTypes() {
+		return tileTypes;
+	}
+
+	public void setTileTypes(Map<String, TileType> tileTypes) {
+		this.tileTypes = tileTypes;
+	}
+
+	public Map<String, Commander> getAvailableCommanders() {
+		return availableCommanders;
+	}
+
+	public void setAvailableCommanders(Map<String, Commander> availableCommanders) {
+		this.availableCommanders = availableCommanders;
+	}
+
+	public GameType getGameType() {
+		return gameType;
+	}
+
+	public void setGameType(GameType gameType) {
+		this.gameType = gameType;
+	}
+
+	public double getTimePerTurn() {
+		return timePerTurn;
+	}
+
+	public void setTimePerTurn(double timePerTurn) {
+		this.timePerTurn = timePerTurn;
+	}
+
+	public double getTimePerProduction() {
+		return timePerProduction;
+	}
+
+	public void setTimePerProduction(double timePerProduction) {
+		this.timePerProduction = timePerProduction;
+	}
+
+	public double getTimePerUnit() {
+		return timePerUnit;
+	}
+
+	public void setTimePerUnit(double timePerUnit) {
+		this.timePerUnit = timePerUnit;
+	}
+
+	public double getTimePerValue() {
+		return timePerValue;
+	}
+
+	public void setTimePerValue(double timePerValue) {
+		this.timePerValue = timePerValue;
+	}
+
+	public double getValueForTime() {
+		return valueForTime;
+	}
+
+	public void setValueForTime(double valueForTime) {
+		this.valueForTime = valueForTime;
+	}
+
+	public double getInitialReserveTime() {
+		return initialReserveTime;
+	}
+
+	public void setInitialReserveTime(double initialReserveTime) {
+		this.initialReserveTime = initialReserveTime;
+	}
+
+	public double getReserveTimeBuildupMultiplier() {
+		return reserveTimeBuildupMultiplier;
+	}
+
+	public void setReserveTimeBuildupMultiplier(double reserveTimeBuildupMultiplier) {
+		this.reserveTimeBuildupMultiplier = reserveTimeBuildupMultiplier;
+	}
+
+	public double getReserveTimePerTurnMultiplier() {
+		return reserveTimePerTurnMultiplier;
+	}
+
+	public void setReserveTimePerTurnMultiplier(double reserveTimePerTurnMultiplier) {
+		this.reserveTimePerTurnMultiplier = reserveTimePerTurnMultiplier;
+	}
+
+	public double getMoneyPerCapture() {
+		return moneyPerCapture;
+	}
+
+	public void setMoneyPerCapture(double moneyPerCapture) {
+		this.moneyPerCapture = moneyPerCapture;
+	}
+
+	public int getPointsToCapture() {
+		return pointsToCapture;
+	}
+
+	public void setPointsToCapture(int pointsToCapture) {
+		this.pointsToCapture = pointsToCapture;
+	}
 }

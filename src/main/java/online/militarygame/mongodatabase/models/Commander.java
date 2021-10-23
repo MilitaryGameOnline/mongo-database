@@ -5,18 +5,18 @@ import java.util.List;
 
 //TODO
 public class Commander {
-	private int id = 0;
+	private String id = "0";
 	private String name = "General";
 	private String description = "Description";
 	private String graphicsPath = "/commanders/general.svg";
 
 	private List<Ability> abilities = new ArrayList<>();
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
