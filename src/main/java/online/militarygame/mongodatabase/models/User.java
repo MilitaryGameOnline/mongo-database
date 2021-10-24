@@ -1,9 +1,6 @@
 package online.militarygame.mongodatabase.models;
 
-import online.militarygame.mongodatabase.enums.GameType;
-
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 
 public class User {
 	private long id = 0L;
@@ -11,9 +8,12 @@ public class User {
 	String password = "password";
 	String email = "email";
 
-	private Map<GameType, Double> rankings = new HashMap<>();
+	private ArrayList<Ranking> rankings = new ArrayList<>();
 
-	public User(long id, String name, String password, String email, Map<GameType, Double> rankings) {
+	public User() {
+	}
+
+	public User(long id, String name, String password, String email, ArrayList<Ranking> rankings) {
 		this.id = id;
 		this.name = name;
 		this.password = password;

@@ -1,11 +1,10 @@
 package online.militarygame.mongodatabase.models;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
-import java.util.Map;
 
 public class TileType {
-	private String id;
+	private Integer id;
 	private String name = "Tile";
 	private String description = "Description";
 	private String graphicsPath = "/tiles/tile.svg";
@@ -17,18 +16,18 @@ public class TileType {
 	private boolean presidentOffice = false;
 
 	
-	private Map<String, Integer> movementTypeCosts = new HashMap<>();
+	private ArrayList<MovementTypeCost> movementTypeCosts = new ArrayList<>();
 	private LinkedHashSet<Integer> unitsCapableOfProducing = new LinkedHashSet<>();
 
 	private boolean canProduce(int unitId){
 		return unitsCapableOfProducing.contains(unitId);
 	}
 
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -96,11 +95,11 @@ public class TileType {
 		this.defenseRating = defenseRating;
 	}
 
-	public Map<String, Integer> getMovementTypeCosts() {
+	public ArrayList<MovementTypeCost> getMovementTypeCosts() {
 		return movementTypeCosts;
 	}
 
-	public void setMovementTypeCosts(Map<String, Integer> movementTypeCosts) {
+	public void setMovementTypeCosts(ArrayList<MovementTypeCost> movementTypeCosts) {
 		this.movementTypeCosts = movementTypeCosts;
 	}
 

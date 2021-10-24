@@ -21,7 +21,7 @@ public class MapInitiation {
 		return gameMap;
 	}
 
-	private static void fillMap(GameMap gameMap, String tileType) {
+	private static void fillMap(GameMap gameMap, Integer tileType) {
 		List<TileTypeCoordinate> tileTypeCoordinates = gameMap.getTileTypeCoordinates();
 		for(int x = 0; x < gameMap.getBoundsX(); x++){
 			for(int y = 0; y < gameMap.getBoundsY(); y++) {
@@ -30,7 +30,7 @@ public class MapInitiation {
 				coordinate.setX(x);
 				coordinate.setY(y);
 				tileTypeCoordinate.setCoordinate(coordinate);
-				tileTypeCoordinate.setTileType(Integer.parseInt(tileType));
+				tileTypeCoordinate.setTileType(tileType);
 				tileTypeCoordinates.add(tileTypeCoordinate);
 			}
 		}

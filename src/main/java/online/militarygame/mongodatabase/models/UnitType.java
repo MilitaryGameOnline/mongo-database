@@ -2,17 +2,16 @@ package online.militarygame.mongodatabase.models;
 
 import online.militarygame.mongodatabase.enums.unit.MovementType;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 public class UnitType {
-	private String id;
+	private Integer id;
 	private String name = "New unit";
 	private String graphicsName = "/units/default.svg";
 
-	private String movementType = MovementType.FOOT;
+	private MovementType movementType = MovementType.FOOT;
 	private int movement = 1;
 	private boolean banned = false;
 
@@ -34,14 +33,14 @@ public class UnitType {
 
 	private boolean canCapture = false;
 
-	private Map<String, Double> damageValues = new HashMap<>();
-	private Map<String, Double> secondaryDamageValues = new HashMap<>();
+	private ArrayList<DamageValue> damageValues = new ArrayList<>();
+	private ArrayList<DamageValue> secondaryDamageValues = new ArrayList<>();
 
 	private int loadCapacity = 0;
 	private boolean unloadedCanMove = false;
 	private boolean refuelsLoaded = true;
 	private double loadedHealRate = 0;
-	private Set<String> loadableUnits = new HashSet<>();
+	private Set<Integer> loadableUnits = new HashSet<>();
 
 	private int nearbyRefuelRange = 0;
 	private double nearbyRefuelRepair = 0;
@@ -52,11 +51,11 @@ public class UnitType {
 	private int selfDestructAbilityRange = 0;
 	private double selfDestructAbilityDamage = 0;
 
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -76,11 +75,11 @@ public class UnitType {
 		this.graphicsName = graphicsName;
 	}
 
-	public String getMovementType() {
+	public MovementType getMovementType() {
 		return movementType;
 	}
 
-	public void setMovementType(String movementType) {
+	public void setMovementType(MovementType movementType) {
 		this.movementType = movementType;
 	}
 	public int getMovement() {
@@ -203,19 +202,19 @@ public class UnitType {
 		this.canCapture = canCapture;
 	}
 
-	public Map<String, Double> getDamageValues() {
+	public ArrayList<DamageValue> getDamageValues() {
 		return damageValues;
 	}
 
-	public void setDamageValues(Map<String, Double> damageValues) {
+	public void setDamageValues(ArrayList<DamageValue> damageValues) {
 		this.damageValues = damageValues;
 	}
 
-	public Map<String, Double> getSecondaryDamageValues() {
+	public ArrayList<DamageValue> getSecondaryDamageValues() {
 		return secondaryDamageValues;
 	}
 
-	public void setSecondaryDamageValues(Map<String, Double> secondaryDamageValues) {
+	public void setSecondaryDamageValues(ArrayList<DamageValue> secondaryDamageValues) {
 		this.secondaryDamageValues = secondaryDamageValues;
 	}
 
@@ -227,11 +226,11 @@ public class UnitType {
 		this.loadCapacity = loadCapacity;
 	}
 
-	public Set<String> getLoadableUnits() {
+	public Set<Integer> getLoadableUnits() {
 		return loadableUnits;
 	}
 
-	public void setLoadableUnits(Set<String> loadableUnits) {
+	public void setLoadableUnits(Set<Integer> loadableUnits) {
 		this.loadableUnits = loadableUnits;
 	}
 

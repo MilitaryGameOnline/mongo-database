@@ -7,11 +7,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CommanderInitiation {
-	public static final String GENERAL = "0";
+	public static final Integer GENERAL = 0;
 
-	public static Map<String, Commander> makeCommanderMap1()
+	public static ArrayList<Commander> makeCommanderMap1()
 	{
-		Map<String, Commander> commanderMap = new HashMap<>();
+		ArrayList<Commander> commanderMap = new ArrayList<>();
 
 		Commander general = new Commander();
 		general.setId(GENERAL);
@@ -24,7 +24,7 @@ public class CommanderInitiation {
 		return commanderMap;
 	}
 
-	private static void putToMap(Commander commander, Map<String, Commander> commanderMap) {
-		commanderMap.put(commander.getId(), commander);
+	private static void putToMap(Commander commander, ArrayList<Commander> commanderMap) {
+		commanderMap.add(commander);
 	}
 }

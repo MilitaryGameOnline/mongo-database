@@ -3,6 +3,7 @@ package online.militarygame.mongodatabase.models;
 
 import online.militarygame.mongodatabase.enums.GameType;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,11 +13,11 @@ public class RuleSet {
 	private boolean customRuleSet = false;
 
 	//Unit id, unit type map
-	private Map<String, UnitType> unitTypes = new HashMap<>();
+	private ArrayList<UnitType> unitTypes = new ArrayList<>();
 	//Tile id, tile type map;
-	private Map<String, TileType> tileTypes = new HashMap<>();
+	private ArrayList<TileType> tileTypes = new ArrayList<>();
 
-	private Map<String, Commander> availableCommanders = new HashMap<>();
+	private ArrayList<Commander> availableCommanders = new ArrayList<>();
 
 	private GameType gameType = GameType.STANDARD;
 
@@ -56,27 +57,27 @@ public class RuleSet {
 		this.customRuleSet = customRuleSet;
 	}
 
-	public Map<String, UnitType> getUnitTypes() {
+	public ArrayList<UnitType> getUnitTypes() {
 		return unitTypes;
 	}
 
-	public void setUnitTypes(Map<String, UnitType> unitTypes) {
+	public void setUnitTypes(ArrayList<UnitType> unitTypes) {
 		this.unitTypes = unitTypes;
 	}
 
-	public Map<String, TileType> getTileTypes() {
+	public ArrayList<TileType> getTileTypes() {
 		return tileTypes;
 	}
 
-	public void setTileTypes(Map<String, TileType> tileTypes) {
+	public void setTileTypes(ArrayList<TileType> tileTypes) {
 		this.tileTypes = tileTypes;
 	}
 
-	public Map<String, Commander> getAvailableCommanders() {
+	public ArrayList<Commander> getAvailableCommanders() {
 		return availableCommanders;
 	}
 
-	public void setAvailableCommanders(Map<String, Commander> availableCommanders) {
+	public void setAvailableCommanders(ArrayList<Commander> availableCommanders) {
 		this.availableCommanders = availableCommanders;
 	}
 
