@@ -24,6 +24,9 @@ public class Routes {
 
 	public void start(int port){
 		Spark.port(port);
+		Spark.after((request, response) -> {
+			response.header("Access-Control-Allow-Origin", "*");
+		});
 		Spark.get(" ", this::getDefaultRules);
 		Spark.get("/default/game", this::getDefaultGame);
 	}
