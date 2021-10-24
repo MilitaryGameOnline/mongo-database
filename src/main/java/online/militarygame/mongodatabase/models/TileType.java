@@ -1,7 +1,5 @@
 package online.militarygame.mongodatabase.models;
 
-import online.militarygame.mongodatabase.enums.unit.MovementType;
-
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;

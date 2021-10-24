@@ -1,4 +1,4 @@
-package online.militarygame.mongodatabase.models;
+package online.militarygame.mongodatabase.models.coordinate;
 
 import java.util.Objects;
 
@@ -25,6 +25,14 @@ public class Coordinate {
 	@Override
 	public int hashCode() {
 		return Objects.hash(x, y);
+	}
+
+	@Override
+	public String toString() {
+		return "Coordinate{" +
+				"x=" + x +
+				", y=" + y +
+				'}';
 	}
 
 	public int getX() {

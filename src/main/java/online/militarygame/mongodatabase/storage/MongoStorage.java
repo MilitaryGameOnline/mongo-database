@@ -8,6 +8,7 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Indexes;
 import com.mongodb.client.model.UpdateOptions;
+import online.militarygame.mongodatabase.initiaion.GameInitiation;
 import online.militarygame.mongodatabase.initiaion.RulesetIniation;
 import online.militarygame.mongodatabase.models.*;
 import org.bson.codecs.configuration.CodecRegistries;
@@ -26,6 +27,7 @@ public class MongoStorage {
 		CodecRegistry codec = CodecRegistries.fromRegistries(MongoClient.getDefaultCodecRegistry(),
 				CodecRegistries.fromProviders(PojoCodecProvider.builder()
 						.register("online.militarygame.mongodatabase.models")
+						.register("online.militarygame.mongodatabase.models.coordinate")
 						.build()));
 		MongoClientOptions options = MongoClientOptions.builder()
 				.codecRegistry(codec)
@@ -51,6 +53,17 @@ public class MongoStorage {
 		officialRuleSetCollection.createIndex(Indexes.descending("name"));
 
 		addRuleSet(RulesetIniation.makeDefaultRuleSet());
+		addGame(GameInitiation.makeDefaultGame1());
+	}
+
+	private void addGame(Game game) {
+		Bson filter = Filters.eq("_id", game.getId());
+		gameCollection.replaceOne(filter, game, new UpdateOptions().upsert(true));
+	}
+
+	public Game getDefaultGame(){
+		Bson filter = Filters.eq("_id", GameInitiation.DEFAULT_GAME_1_ID);
+		return gameCollection.find().filter(filter).first();
 	}
 
 	public void addRuleSet(RuleSet ruleSet){
